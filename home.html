@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="header">
+        <div class="navbar">
+           <img src="/mini-product-catalog/images/lgo.png" alt="Logo" class="logo">
+            <div class="nav1">
+                <a class="nav" href="home.html">home</a>
+                <a class="nav" href="about.html">about us</a>
+                <a class="nav" href="product.html">products</a>
+                <a class="nav" href="add-product.html">cart</a>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search" placeholder="search here.." id="searchInput">
+            <button class="search-btn" onclick="searchProducts()">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+        
+        <select id="sortOptions" onchange="sortProducts()">
+            <option value="">-- Sort By --</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+            <option value="nameAZ">Name: A to Z</option>
+        </select>
+    </section>
+   
+   <section class="main">
+    <div class="hero">
+        <h1 class="heading">shop <span>Best</span> products</h1>
+        <h4 class="heading">We make jewelry to make you happy.</h4>
+        <button class="ctabtn">View<i class="ri-arrow-right-long-fill icon"></i></button>
+    </div>
+    
+    <div id="productList">
+        
+        <div class="product" data-name="Diamond Elegance Ring" data-price="18500">
+            <img src="/mini-product-catalog/images/img2.jpeg" alt="Diamond Elegance Ring">
+            <div class="product-name">Diamond Elegance Ring</div>
+            <div class="product-price">18,500 PKR</div>
+        </div>
+        
+        <div class="product" data-name="Ruby Royale Ring" data-price="25000">
+            <img src="/mini-product-catalog/images/img3.png" alt="Ruby Royale Ring">
+            <div class="product-name">Ruby Royal Ring</div>
+            <div class="product-price">25,000 PKR</div>
+        </div>
+        
+        <div class="product" data-name="Sapphire Shine Ring" data-price="20000">
+            <img src="/mini-product-catalog/images/img4.jpg" alt="Sapphire Shine Ring">
+            <div class="product-name">Sapphire Shine Ring</div>
+            <div class="product-price">20,000 PKR</div>
+        </div>
+        
+        <div class="product" data-name="Emerald Classic Ring" data-price="22000">
+            <img src="/mini-product-catalog/images/img5.png" alt="Emerald Classic Ring">
+            <div class="product-name">Emerald Classic Ring</div>
+            <div class="product-price">22,000 PKR</div>
+        </div>
+        
+        <div class="product" data-name="Golden Heart Ring" data-price="15000">
+            <img src="/mini-product-catalog/images/img6.png" alt="Golden Heart Ring">
+            <div class="product-name">Golden Heart Ring</div>
+            <div class="product-price">215,00 PKR</div>
+        </div>
+        
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img9.png" alt="Single Name Ring">
+            <div class="product-name"> Name Ring</div>
+            <div class="product-price">41,6399 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img8.png" alt="Single Name Ring">
+            <div class="product-name">diamond Ring</div>
+            <div class="product-price">61,3799 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img7.png" alt="Single Name Ring">
+            <div class="product-name">rare gold Ring</div>
+            <div class="product-price">51,399 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img10.jpg" alt="Single Name Ring">
+            <div class="product-name">royal Ring</div>
+            <div class="product-price">61,399 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img11.png" alt="Single Name Ring">
+            <div class="product-name">kingdom Ring</div>
+            <div class="product-price">16,399 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img12.png" alt="Single Name Ring">
+            <div class="product-name">grace Ring</div>
+            <div class="product-price">1,8399 PKR</div>
+        </div>
+        <div class="product" data-name="Single Name Ring" data-price="1399">
+            <img src="/mini-product-catalog/images/img9.jpg" alt="Single Name Ring">
+            <div class="product-name">mePurado Ring</div>
+            <div class="product-price">1,3999 PKR</div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We craft elegant jewelry pieces that define timeless beauty. Discover rings, necklaces, and more with premium craftsmanship.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <p>Email: support@jewelcraft.com</p>
+                <p>Phone: +92 300 1234567</p>
+                <p>Karachi, Pakistan</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-instagram-line"></i>instagram</a><br>
+                    <a href="#"><i class="ri-twitter-x-line"></i> Xtwitter</a><br>
+                    <a href="#"><i class="ri-facebook-box-fill"></i>facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 JewelCraft. All Rights Reserved.</p>
+        </div>
+    </footer>
+   </section>
+
+   <script>
+    function sortProducts() {
+        const sortOption = document.getElementById("sortOptions").value;
+        const productList = document.getElementById("productList");
+        const products = Array.from(productList.getElementsByClassName("product"));
+
+        let sortedProducts;
+
+        if (sortOption === "priceLowHigh") {
+            sortedProducts = products.sort((a, b) => {
+                const priceA = parseInt(a.dataset.price);
+                const priceB = parseInt(b.dataset.price);
+                return priceA - priceB;
+            });
+        } 
+        else if (sortOption === "priceHighLow") {
+            sortedProducts = products.sort((a, b) => {
+                const priceA = parseInt(a.dataset.price);
+                const priceB = parseInt(b.dataset.price);
+                return priceB - priceA;
+            });
+        } 
+        else if (sortOption === "nameAZ") {
+            sortedProducts = products.sort((a, b) => 
+                a.dataset.name.localeCompare(b.dataset.name)
+            );
+        } 
+        else {
+            return; 
+        }
+        productList.innerHTML = "";
+        sortedProducts.forEach(product => productList.appendChild(product));
+    }
+
+    // search functionality
+    function searchProducts() {
+        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        const products = document.getElementsByClassName("product");
+        
+        Array.from(products).forEach(product => {
+            const productName = product.dataset.name.toLowerCase();
+            if (productName.includes(searchTerm)) {
+                product.style.display = "flex";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            searchProducts();
+        }
+    });
+    document.querySelector('.ctabtn').addEventListener('click', function() {
+        document.getElementById('productList').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+   </script>
+</body>
+</html>
